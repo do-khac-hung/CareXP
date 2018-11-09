@@ -1,0 +1,51 @@
+﻿namespace CareXP.EPC {
+    export interface PartGroupForm {
+        ModelName: Serenity.StringEditor;
+        Id: Serenity.IntegerEditor;
+        VersionId: Serenity.LookupEditor;
+        Name: Serenity.StringEditor;
+        Description: Serenity.StringEditor;
+        LinkArea: Serenity.StringEditor;
+        ThumbnailImage: Serenity.ImageUploadEditor;
+        BigImage: Serenity.ImageUploadEditor;
+        PartList: Part2GroupsEditor;
+        ModifiedDate: Serenity.DateEditor;
+        ModifiedBy: Serenity.IntegerEditor;
+    }
+
+    export class PartGroupForm extends Serenity.PrefixedContext {
+        static formKey = 'EPC.PartGroup';
+        private static init: boolean;
+
+        constructor(prefix: string) {
+            super(prefix);
+
+            if (!PartGroupForm.init)  {
+                PartGroupForm.init = true;
+
+                var s = Serenity;
+                var w0 = s.StringEditor;
+                var w1 = s.IntegerEditor;
+                var w2 = s.LookupEditor;
+                var w3 = s.ImageUploadEditor;
+                var w4 = Part2GroupsEditor;
+                var w5 = s.DateEditor;
+
+                Q.initFormType(PartGroupForm, [
+                    'ModelName', w0,
+                    'Id', w1,
+                    'VersionId', w2,
+                    'Name', w0,
+                    'Description', w0,
+                    'LinkArea', w0,
+                    'ThumbnailImage', w3,
+                    'BigImage', w3,
+                    'PartList', w4,
+                    'ModifiedDate', w5,
+                    'ModifiedBy', w1
+                ]);
+            }
+        }
+    }
+}
+
