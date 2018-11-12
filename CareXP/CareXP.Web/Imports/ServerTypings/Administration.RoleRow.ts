@@ -13,7 +13,7 @@
         export const lookupKey = 'Administration.Role';
 
         export function getLookup(): Q.Lookup<RoleRow> {
-            return Q.getLookup<RoleRow>('Administration.RoleTenant'); 
+            return Q.getLookup<RoleRow>('Administration.Role');
         }
 
         export declare const enum Fields {

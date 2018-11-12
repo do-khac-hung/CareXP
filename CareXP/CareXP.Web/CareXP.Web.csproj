@@ -993,6 +993,9 @@
     <TypeScriptCompile Include="Imports\ServerTypings\Administration.TenantColumns.ts">
       <DependentUpon>ServerTypings.tt</DependentUpon>
     </TypeScriptCompile>
+    <TypeScriptCompile Include="Imports\ServerTypings\CMS.PostsColumns.ts">
+      <DependentUpon>ServerTypings.tt</DependentUpon>
+    </TypeScriptCompile>
     <TypeScriptCompile Include="Modules\Administration\Myself.ts" />
     <TypeScriptCompile Include="node_modules\%40types\jquery\index.d.ts" />
     <TypeScriptCompile Include="node_modules\%40types\jqueryui\index.d.ts" />
@@ -1010,7 +1013,7 @@
     <Content Include="Imports\Web.config" />
     <Content Include="Migrations\Web.config" />
     <Content Include="Modules\BasicSamples\Grids\WrappedHeaders\Index.cshtml" />
-    <Content Include="Content\site\CssBundles.json" />
+    <Content Include="Content\site\slides\CssBundles.json" />
     <Content Include="Scripts\SlickGrid\slick.core.js" />
     <Content Include="Scripts\SlickGrid\slick.core.min.js" />
     <Content Include="Scripts\SlickGrid\slick.dataview.js" />
@@ -1837,12 +1840,18 @@
     <TypeScriptCompile Include="Imports\ServerTypings\Administration.TenantForm.ts">
       <DependentUpon>ServerTypings.tt</DependentUpon>
     </TypeScriptCompile>
-    <TypeScriptCompile Include="Imports\ServerTypings\CMS.PostsRow.ts">  <DependentUpon>ServerTypings.tt</DependentUpon></TypeScriptCompile>
-    <TypeScriptCompile Include="Imports\ServerTypings\CMS.PostsService.ts">  <DependentUpon>ServerTypings.tt</DependentUpon></TypeScriptCompile>
+    <TypeScriptCompile Include="Imports\ServerTypings\CMS.PostsRow.ts">
+      <DependentUpon>ServerTypings.tt</DependentUpon>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="Imports\ServerTypings\CMS.PostsService.ts">
+      <DependentUpon>ServerTypings.tt</DependentUpon>
+    </TypeScriptCompile>
     <Content Include="Modules\CMS\Posts\PostsIndex.cshtml" />
     <TypeScriptCompile Include="Modules\CMS\Posts\PostsDialog.ts" />
     <TypeScriptCompile Include="Modules\CMS\Posts\PostsGrid.ts" />
-    <TypeScriptCompile Include="Imports\ServerTypings\CMS.PostsForm.ts">  <DependentUpon>ServerTypings.tt</DependentUpon></TypeScriptCompile>
+    <TypeScriptCompile Include="Imports\ServerTypings\CMS.PostsForm.ts">
+      <DependentUpon>ServerTypings.tt</DependentUpon>
+    </TypeScriptCompile>
     <Content Include="Content\site\site.cms.less" />
   </ItemGroup>
   <ItemGroup>

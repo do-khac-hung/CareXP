@@ -273,6 +273,15 @@ namespace MVC
 
         }
 
+        public static class CMS
+        {
+            public static class Posts
+            {
+                public const string PostsIndex = "~/Modules/CMS/Posts/PostsIndex.cshtml";
+            }
+
+        }
+
         public static class Common
         {
             public static class Dashboard

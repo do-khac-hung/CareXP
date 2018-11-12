@@ -1,5 +1,4 @@
-﻿
-namespace CareXP.CMS {
+﻿namespace CareXP.CMS {
     export interface PostsRow {
         Id?: number;
         TenantId?: number;
@@ -19,32 +18,19 @@ namespace CareXP.CMS {
         export const nameProperty = 'Status';
         export const localTextPrefix = 'CMS.Posts';
 
-        export namespace Fields {
-            export declare const Id;
-            export declare const TenantId;
-            export declare const ModifiedDate;
-            export declare const ModifiedBy;
-            export declare const CustomerId;
-            export declare const Status;
-            export declare const Vin;
-            export declare const Model;
-            export declare const Subject;
-            export declare const MainContent;
-            export declare const FeatureImage;
+        export declare const enum Fields {
+            Id = "Id",
+            TenantId = "TenantId",
+            ModifiedDate = "ModifiedDate",
+            ModifiedBy = "ModifiedBy",
+            CustomerId = "CustomerId",
+            Status = "Status",
+            Vin = "Vin",
+            Model = "Model",
+            Subject = "Subject",
+            MainContent = "MainContent",
+            FeatureImage = "FeatureImage"
         }
-
-        [
-            'Id',
-            'TenantId',
-            'ModifiedDate',
-            'ModifiedBy',
-            'CustomerId',
-            'Status',
-            'Vin',
-            'Model',
-            'Subject',
-            'MainContent',
-            'FeatureImage'
-        ].forEach(x => (<any>Fields)[x] = x);
     }
 }
+

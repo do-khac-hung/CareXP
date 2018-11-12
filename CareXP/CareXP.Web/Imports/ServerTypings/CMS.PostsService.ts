@@ -1,5 +1,4 @@
-﻿
-namespace CareXP.CMS {
+﻿namespace CareXP.CMS {
     export namespace PostsService {
         export const baseUrl = 'CMS/Posts';
 
@@ -9,12 +8,12 @@ namespace CareXP.CMS {
         export declare function Retrieve(request: Serenity.RetrieveRequest, onSuccess?: (response: Serenity.RetrieveResponse<PostsRow>) => void, opt?: Q.ServiceOptions<any>): JQueryXHR;
         export declare function List(request: Serenity.ListRequest, onSuccess?: (response: Serenity.ListResponse<PostsRow>) => void, opt?: Q.ServiceOptions<any>): JQueryXHR;
 
-        export namespace Methods {
-            export declare const Create: string;
-            export declare const Update: string;
-            export declare const Delete: string;
-            export declare const Retrieve: string;
-            export declare const List: string;
+        export declare const enum Methods {
+            Create = "CMS/Posts/Create",
+            Update = "CMS/Posts/Update",
+            Delete = "CMS/Posts/Delete",
+            Retrieve = "CMS/Posts/Retrieve",
+            List = "CMS/Posts/List"
         }
 
         [
@@ -24,10 +23,10 @@ namespace CareXP.CMS {
             'Retrieve', 
             'List'
         ].forEach(x => {
-            (<any>PostsService)[x] = function (r, s, o) { 
-                return Q.serviceRequest(baseUrl + '/' + x, r, s, o); 
+            (<any>PostsService)[x] = function (r, s, o) {
+                return Q.serviceRequest(baseUrl + '/' + x, r, s, o);
             };
-            (<any>Methods)[x] = baseUrl + '/' + x;
         });
     }
 }
+
